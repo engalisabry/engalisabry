@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 async function fetchLatestGists() {
   try {
     // Fetch latest gists from the GitHub API
-    const response = await fetch('https://api.github.com/users/ali-sabry/gists');
+    const response = await fetch('https://api.github.com/users/engalisabry/gists');
     const gists = await response.json();
 
     // Get the latest two gists
