@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch: 
 
 jobs:
   fetch-gists:
@@ -46,4 +47,4 @@ jobs:
         git config --global user.email "github-actions@users.noreply.github.com"
         git add README.md
         git commit -am "Update README with latest gists" || echo "No changes to commit"
-        git push https://x-access-token:${{ secrets.MAIN_MARKDOWN_FILE }}@github.com/engalisabry/engalisabry.git HEAD:main
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/engalisabry/engalisabry.git HEAD:main
